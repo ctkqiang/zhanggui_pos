@@ -59,3 +59,6 @@ flutter:
   assets:
     - assets/.env
     - assets/app.png
+    - assets/scanner.png
+    - assets/inventory.png
+    - assets/info.png
