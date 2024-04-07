@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:zhanggui_pos/pages/account_setup.dart';
+import 'package:zhanggui_pos/pages/menu_page.dart';
 
 class SplashScreen extends StatefulWidget {
   String? name;
@@ -40,7 +41,9 @@ class _SplashScreenState extends State<SplashScreen> {
   Future<void> onNavigate() async {
     if (box.read("员工姓名") == null && box.read("企业名称") == null) {
       Get.to(const AccountSetup());
-    } else {}
+    } else {
+      Get.to(const MenuPage());
+    }
   }
 
   @override

@@ -53,6 +53,10 @@ class _MainAppState extends State<MainApp> {
       supportedLocales: const [Locale("zh")],
       home: SplashScreen(name: appName),
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          color: const Color.fromARGB(255, 132, 151, 255),
+          elevation: 0.0,
+        ),
         cardColor: Color.fromARGB(255, 132, 151, 255).withOpacity(0.3),
         colorScheme: ColorScheme.fromSwatch()
             .copyWith(secondary: const Color.fromARGB(255, 132, 151, 255))
