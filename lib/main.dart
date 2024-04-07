@@ -54,12 +54,12 @@ class _MainAppState extends State<MainApp> {
       home: SplashScreen(name: appName),
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          color: const Color.fromARGB(255, 132, 151, 255),
+          color: const Color(0xffb5c6c5),
           elevation: 0.0,
         ),
-        cardColor: Color.fromARGB(255, 132, 151, 255).withOpacity(0.3),
+        cardColor: Color(0xffb5c6c5).withOpacity(0.3),
         colorScheme: ColorScheme.fromSwatch()
-            .copyWith(secondary: const Color.fromARGB(255, 132, 151, 255))
+            .copyWith(secondary: const Color(0xffb5c6c5))
             .copyWith(background: Colors.white),
       ),
     );

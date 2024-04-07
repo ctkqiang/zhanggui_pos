@@ -69,7 +69,13 @@ class _MenuPageState extends State<MenuPage> {
         ),
       ),
       body: Center(
-        child: Padding(
+        child: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage("assets/background.png"),
+              fit: BoxFit.cover,
+            ),
+          ),
           padding: const EdgeInsets.only(top: 120),
           child: ScrollConfiguration(
             behavior: ZhangGuiPOSScrollPhysics(),
@@ -84,9 +90,14 @@ class _MenuPageState extends State<MenuPage> {
                 return Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: InkWell(
+                    splashColor: Colors.white,
+                    highlightColor: Colors.white,
                     borderRadius: BorderRadius.circular(35.0),
                     onTap: () => onMenuTap(index),
-                    child: SizedBox(
+                    child: Card(
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(25.0),
+                      ),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
@@ -98,7 +109,11 @@ class _MenuPageState extends State<MenuPage> {
                           ),
                           Text(
                             posMenu.name!,
-                            style: const TextStyle(fontSize: 25),
+                            style: const TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ],

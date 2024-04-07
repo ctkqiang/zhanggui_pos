@@ -44,29 +44,29 @@ class UserInput extends StatelessWidget {
                   child: TextFormField(
                     controller: userData,
                     keyboardType: TextInputType.text,
-                    cursorColor: const Color.fromARGB(255, 132, 151, 255),
+                    cursorColor: const Color(0xffb5c6c5),
                     decoration: InputDecoration(
                       prefixIcon: const Icon(
                         Icons.edit_document,
-                        color: Color.fromARGB(255, 132, 151, 255),
+                        color: Color(0xffb5c6c5),
                       ),
                       hintText: question,
                       contentPadding: const EdgeInsets.symmetric(
                         vertical: 20,
                         horizontal: 15,
                       ),
-                      fillColor: const Color.fromARGB(255, 132, 151, 255),
+                      fillColor: const Color(0xffb5c6c5),
                       focusedBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                         borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 132, 151, 255),
+                          color: Color(0xffb5c6c5),
                           width: 2.0,
                         ),
                       ),
                       enabledBorder: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0),
                         borderSide: const BorderSide(
-                          color: Color.fromARGB(255, 132, 151, 255),
+                          color: Color(0xffb5c6c5),
                         ),
                       ),
                     ),
@@ -99,7 +99,7 @@ class UserInput extends StatelessWidget {
                       ),
                       enableFeedback: true,
                       backgroundColor: const MaterialStatePropertyAll(
-                        Color.fromARGB(255, 132, 151, 255),
+                        Color(0xffb5c6c5),
                       ),
                     ),
                     label: const Text("保存", style: TextStyle(fontSize: 20)),
