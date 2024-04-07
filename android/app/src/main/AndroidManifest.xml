@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="cn.ctkqiang.zhanggui_pos">
    <application
-        android:label="zhanggui_pos"
+        android:label="掌柜 POS"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

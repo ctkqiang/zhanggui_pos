@@ -16,8 +16,8 @@ Future<void> main() async {
     WidgetsFlutterBinding.ensureInitialized();
 
     await GetStorage.init();
-    await Firebase.initializeApp();
-    await dotenv.load(fileName: "assets/.env");
+    // await Firebase.initializeApp();
+    // await dotenv.load(fileName: "assets/.env");
 
     // FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
 
@@ -37,16 +37,16 @@ class MainApp extends StatefulWidget {
 }
 
 class _MainAppState extends State<MainApp> {
-  static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
-  static FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(
-    analytics: analytics,
-  );
+  // static FirebaseAnalytics analytics = FirebaseAnalytics.instance;
+  // static FirebaseAnalyticsObserver observer = FirebaseAnalyticsObserver(
+  //   analytics: analytics,
+  // );
 
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: "SharEV",
-      navigatorObservers: [observer],
+      title: appName,
+      // navigatorObservers: [observer],
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
         GlobalWidgetsLocalizations.delegate,
