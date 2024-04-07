@@ -4,6 +4,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:get_storage/get_storage.dart';
 import 'package:zhanggui_pos/pages/account_setup.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -16,6 +17,8 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
+  final box = GetStorage();
+
   final interval = const Duration(seconds: 1);
   final int timerMaxSeconds = 5;
 
@@ -35,7 +38,11 @@ class _SplashScreenState extends State<SplashScreen> {
   }
 
   Future<void> onNavigate() async {
-    Get.to(AccountSetup());
+    if (box.read("员工姓名") == null && box.read("企业名称") == null) {
+       Get.to(const AccountSetup());
+    } else {
+     
+    }
   }
 
   @override
