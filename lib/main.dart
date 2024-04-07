@@ -1,7 +1,5 @@
-// ignore_for_file: must_be_immutable
+// ignore_for_file: must_be_immutable, prefer_const_constructors
 
-import 'package:firebase_analytics/firebase_analytics.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -52,8 +50,14 @@ class _MainAppState extends State<MainApp> {
         GlobalWidgetsLocalizations.delegate,
         GlobalCupertinoLocalizations.delegate,
       ],
-      supportedLocales: const [Locale("en"), Locale("zh")],
+      supportedLocales: const [Locale("zh")],
       home: SplashScreen(name: appName),
+      theme: ThemeData(
+        cardColor: Color.fromARGB(255, 132, 151, 255).withOpacity(0.3),
+        colorScheme: ColorScheme.fromSwatch()
+            .copyWith(secondary: const Color.fromARGB(255, 132, 151, 255))
+            .copyWith(background: Colors.white),
+      ),
     );
   }
 }

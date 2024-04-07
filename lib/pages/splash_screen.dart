@@ -21,9 +21,7 @@ class _SplashScreenState extends State<SplashScreen> {
 
   int currentSeconds = 0;
 
-  String get timerText {
-    return ((timerMaxSeconds - currentSeconds) % 60).toString();
-  }
+  String get timerText => ((timerMaxSeconds - currentSeconds) % 60).toString();
 
   startTimeout([int? milliseconds]) {
     final duration = interval;
