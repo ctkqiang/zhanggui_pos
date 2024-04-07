@@ -39,10 +39,8 @@ class _SplashScreenState extends State<SplashScreen> {
 
   Future<void> onNavigate() async {
     if (box.read("员工姓名") == null && box.read("企业名称") == null) {
-       Get.to(const AccountSetup());
-    } else {
-     
-    }
+      Get.to(const AccountSetup());
+    } else {}
   }
 
   @override
